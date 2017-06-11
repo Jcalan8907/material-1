@@ -26,7 +26,10 @@
             });
 
         vm.querySearch = function (searchText) {
-            if (searchText) {
+            if (angular.isUndefined(searchText) || searchText === null) {
+                return vm.posts;
+            }
+            else {
                 vm.filteredPosts = vm.posts.filter(function (item) {
                     if (item.title.indexOf(searchText) != -1) {
                         return true;
@@ -37,13 +40,10 @@
                 })
                 return vm.filteredPosts
             }
-            else{
-                return vm.posts;
-            }
         }
 
         vm.selectedItemChange = function (newItem) {
-
+            console.log(newItem)
         }
     }
 })();
