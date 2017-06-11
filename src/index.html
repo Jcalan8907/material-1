@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>material</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="app" ng-cloak layout='row'>
+
+    <div ng-controller="mainController as main" flex layout='vertical'>
+        <div flex layout='row' class="slide-animate" ng-include="'main.view.html'" flex></div>
+    </div>
+
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-messages.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.min.js"></script>
+    <script src="app.js"></script>
+    <script src="main.controller.js"></script>
+
+</body>
+
+</html>

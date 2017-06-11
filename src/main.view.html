@@ -1,0 +1,27 @@
+<md-sidenav md-component-id="left" class="md-sidenav-left" md-is-locked-open="$mdMedia('gt-sm')" md-whiteframe="2">
+    <md-toolbar md-hue-4 class="md-hue-4">
+        <h1>Settings</h1>
+    </md-toolbar>
+
+</md-sidenav>
+
+<div layout='column' flex>
+    <md-toolbar md-component-id='top'>
+        <div layout='row'>
+            <md-button hide-gt-sm ng-click="main.openLeftMenu()" class="md-icon-button" md-hue-2>
+                <i class="material-icons">reorder</i>
+                 <md-tooltip md-direction="right" md-delay='500'>Refresh</md-tooltip>
+            </md-button>
+
+            <div flex >
+                <h1>Client Documentation</h1>
+            </div>
+        </div>
+
+
+    </md-toolbar>
+
+    <md-content>
+        <h1> {{main.message}}</h1>
+    </md-content>
+</div>

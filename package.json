@@ -1,0 +1,23 @@
+{
+  "name": "material",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zerg00s/material.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zerg00s/material/issues"
+  },
+  "homepage": "https://github.com/Zerg00s/material#readme"
+
+}
