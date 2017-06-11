@@ -6,22 +6,29 @@
 </md-sidenav>
 
 <div layout='column' flex>
-    <md-toolbar md-component-id='top'>
-        <div layout='row'>
-            <md-button hide-gt-sm ng-click="main.openLeftMenu()" class="md-icon-button" md-hue-2>
-                <i class="material-icons">reorder</i>
-                 <md-tooltip md-direction="right" md-delay='500'>Refresh</md-tooltip>
-            </md-button>
+    <md-toolbar md-component-id='top' class="md-toolbar-tools">
 
-            <div flex >
-                <h1>Client Documentation</h1>
-            </div>
+        <md-button hide-gt-sm ng-click="main.openLeftMenu()" class="md-icon-button" md-hue-2>
+            <i class="material-icons">reorder</i>
+            <!--<md-tooltip md-direction="right" md-delay='500'>Refresh</md-tooltip>-->
+        </md-button>
+        <!--<span flex="" class="flex"></span>-->
+        <div flex layout='row'>
+            <!--<span style='margin:10px;'>Client Documentation</span>-->
+            <md-autocomplete flex style='display:inline-block' md-no-cache="true" md-selected-item="main.selectedItem" md-search-text="main.searchText"
+                md-selected-item-change="main.selectedItemChange(item)" md-items="item in main.querySearch(main.searchText)"
+                md-item-text="item.title" md-min-length="0" placeholder="Pick a Client" md-menu-class="autocomplete-custom-template">
+                <md-item-template>
+                    <div class="item-title" style="display: flex; align-items: center;">
+                        <i class="material-icons" >business</i>
+                        <span > {{item.title}} </span>
+                    </div>
+                </md-item-template>
+            </md-autocomplete>
         </div>
-
-
     </md-toolbar>
 
     <md-content>
-        <h1> {{main.message}}</h1>
+        <h1 class='center'> {{main.message}}</h1>
     </md-content>
 </div>
